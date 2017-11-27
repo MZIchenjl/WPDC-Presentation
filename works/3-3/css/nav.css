@@ -1,0 +1,45 @@
+body {
+    background: #ededed;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.logo {
+    position: absolute;
+    float: left;
+    width: 150px;
+    height: 44px;
+    background: url("../img/logo.png") no-repeat top left/contain;
+    z-index: 12;
+}
+
+.logo a {
+    display: inline-block;
+    line-height: 44px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+a:visited {
+    color: #000;
+}
+
+.mynav ul {
+    width: 100%;
+    position: relative;
+    background-color: darkseagreen;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.mynav li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.mynav li {
+    display: block;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}

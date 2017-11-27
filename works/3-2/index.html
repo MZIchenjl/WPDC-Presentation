@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link href="css/test.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/page-two.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+    <!--<script src="lunbotu.js" type="text/javascript" charset="utf-8"></script>-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/flickerplate.css"  type="text/css" rel="stylesheet">
+
+<body>
+    <div id="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/planet.png" alt="天文社logo" width="30" height="30">
+                </a>
+            </li>
+            <li>
+                <a href="#gallery">首页</a>
+                <a href="#page-two-whole">社团活动</a>
+                <a href="#people_intro">我在天文社</a>
+                <a href="#popular_science_column">科普栏</a>
+                <a href="#FAQ">FAQ</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--首页 需求
+    1.背景 大轮播图5li 下面平直键切换5li 左右箭头切换2li 左右箭头:hover
+    2.导航栏 白色的字5li 左边一个小图标 两边15%固定
+    -->
+
+    <div id="gallery">
+        <div class="h1">
+            <h1>
+                <span>welcome to</span>
+                <br>astronomy club</h1>
+        </div>
+
+        <img id="gallery_wrap" src="images/eye.jpg" width="100%" title="red">
+        <ul class="button">
+            <a id="ul_a" href="images/eye.jpg">
+                <h2>上帝之眼</h2>
+                <p>从照片上可以看到，蔚蓝色瞳孔和白眼球的四周是肉色的眼睑，与我们的眼睛像极了，但“上帝之眼”其实浩瀚无边，它散发的光线从一侧到另一侧需要五到六年时间。这颗星体其实是由位于水瓶座中央的一颗昏暗恒星吹拂而来的气体和尘埃形成的外壳。</p>
+            </a>
+            <a href="images/column.jpg">
+                <h2>创生之柱</h2>
+                <p>1995年，哈勃望远镜拍摄了创世之柱的照片，揭示这3个由冷空气构成的巨柱此前从未见过的细节。这是哈勃望远镜迄今为止拍摄的最具有标志性的照片之一。创世之柱所在的天鹰星云也被称之为“M16星云”。这个星云的一个小区域内存在大量年轻的大质量恒星，创世之柱沐浴在它们放射的光芒中。</p>
+            </a>
+            <a href="images/soap.jpg">
+                <h2>北斗七星</h2>
+                <p>北斗七星是由天枢、天璇、天玑、天权、玉衡、开阳、瑶光七星组成的。古代中国人民把这七星联系起来想象成为古代舀酒的斗形.天枢、天璇、天玑、天权组成为斗身，古曰魁；玉衡、开阳、瑶光组成为斗柄，古曰杓。</p>
+            </a>
+            <a href="images/quasar.jpg">
+                <h2>类星体</h2>
+                <p>类星体是类似恒星天体的简称，又称为似星体、魁霎或类星射电源，与脉冲星、微波背景辐射和星际有机分子一道并称为20世纪60年代天文学“四大发现”。长期以来，它总是让天文学家感到困惑不解。</p>
+            </a>
+            <a href="images/galaxy.jpg">
+                <h2>银河系</h2>
+                <p>银河系的中央是超大质量的黑洞，自内向外分别由银心、银核、银盘、银晕和银冕组成。银河系中央区域多数为老年恒星，外围区域多数为新生和年轻的恒星。周围几十万光年的区域分布着十几个卫星星系，其中较大的有大麦哲伦星云和小麦哲伦星云。银河系通过缓慢的吞噬周边的矮星系使自身不断壮大。</p>
+            </a>
+        </ul>
+        <ul class="switch">
+            <img id="a_left" class="a_left" src="images/left_arrow.png" alt="left_arrow" width="60" height="60">
+            <img id="a_right" class="a_right" src="images/right_arrow.png" alt="right_arrow" width="60" height="60">
+        </ul>
+    </div>
+
+    <div id="page-two-whole">
+        
+                <!--背景-->
+                <div class="page-two-bg">
+                    <div class="page-two-bg-part1"></div>
+                    <div class="page-two-bg-part2"></div>
+        
+                </div>
+        
+        
+                <!-- 火箭 -->
+                <div class="rocketanimation">
+                    <img src="images/rocket.png">
+                </div>
+        
+        
+                <!-- 标题 -->
+                <div id="page-two-line-one">
+                    <div class="page-two-line-one-font">
+                        <span>Community activities</span>
+                    </div>
+                </div>
+        
+                <!--  三角形-->
+                <div class="line-two-triangle">
+        
+                </div>
+        
+        
+        
+                <!-- 下面两个框 -->
+                <div id="page-two-line-two">
+                    <!-- 左边白色框 -->
+                    <div class="page-two-line-two-left">
+                        <div class="line-two-box">
+                            这学期我们主要开展了一些大型户外活动：紫金山天文台的参观之旅；双子座流星雨的天文观测活动，邀请中国科学院院士做讲座，科技文化节中星空探索栏目活动等。
+                            <br> 社团除了一些大型活动外，我们社团还有一些日常活动。例如在社团 活动课刚开始会有趣味天文知识介绍，以充实社员的专业知识。另外不定时的还有天文望远镜规范使用的讲解与考核；在享受的同时能有一些积累。
+        
+        
+                        </div>
+                    </div>
+        
+                    <!-- 右边一堆圆 -->
+                    <div class="page-two-line-two-right">
+        
+                        <div class="round">
+                            <div class="border-spinning"></div>
+                            <img src="images/天文摄影.jpg">
+                            <div class="round-hidden">
+                                <h2>天文摄影</h2>
+                            </div>
+                        </div>
+        
+                        <div class="round">
+                            <div class="border-spinning"></div>
+                            <img src="images/观测.jpg">
+                            <div class="round-hidden">
+                                <h2>观测</h2>
+                            </div>
+                        </div>
+        
+        
+                        <div class="round">
+                            <div class="border-spinning"></div>
+                            <img src="images/天文电影.jpeg">
+                            <div class="round-hidden">
+                                <h2>天文电影</h2>
+                            </div>
+                        </div>
+        
+        
+                        <div class="round">
+                            <div class="border-spinning"></div>
+                            <img src="images/天文馆.jpg">
+                            <div class="round-hidden">
+                                <h2>天文馆</h2>
+                            </div>
+                        </div>
+        
+        
+                        <div class="round">
+                            <div class="border-spinning"></div>
+                            <img src="images/讲座.jpg">
+                            <div class="round-hidden">
+                                <h2>讲座</h2>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+        
+                </div>
+            </div>
+
+    <div class="people_intro" id="people_intro">
+        <section class="hc-banner">
+            <ol>
+                <li id="li1" class="li_id"></li>
+                <li id="li2" class="li_id"></li>
+                <li id="li3" class="li_id"></li>
+                <li id="li4" class="li_id"></li>
+            </ol>
+            <ul class="banner">
+                <li class="hc-bannerbg" id="0">
+                    <div class="people_intro">
+                        <h3 class="intro_title">
+                            <span>我在天文社</span>
+                        </h3>
+                        <div class="intro">
+                            <div class="intro_index">
+                                <p class="Img">
+                                    <span class="s_1"></span>
+                                    <span class="s_2"></span>
+                                    <span class="s_3"></span>
+                                    <img src="images/News_mic_iphone_128px_1184013_easyicon.net.png">
+                                </p>
+                                <div class="intro_text">
+                                    <h4>成员A</h4>
+                                    <p class="intro_detail">五彩缤纷的社团活动丰富了我们的业余生活，也为我们提供了展示自我能力与发挥创造力的舞台。不但能开阔眼界，增加人生阅历，还能提高学生综合素质。适度的社团活动还是我们大学生业余生活的“调味剂”与“润滑剂”。不但可以起到放松心情舒缓压力的作用，而且很多学生在加入社团后，明显的感觉到自己的沟通能力、组织能力、表达能力、处事能力等都有很大进步，性格也变得更加开朗乐观了。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="hc-bannerbg" id="1">
+                    <div class="people_intro">
+                        <h3 class="intro_title">
+                            <span>我在天文社</span>
+                        </h3>
+                        <div class="intro">
+                            <div class="intro_index">
+                                <p class="Img">
+                                    <span class="s_1"></span>
+                                    <span class="s_2"></span>
+                                    <span class="s_3"></span>
+                                    <img src="images/film_128px_1184000_easyicon.net.png">
+                                </p>
+                                <div class="intro_text">
+                                    <h4>成员B</h4>
+                                    <p class="intro_detail">五彩缤纷的社团活动丰富了我们的业余生活，也为我们提供了展示自我能力与发挥创造力的舞台。不但能开阔眼界，增加人生阅历，还能提高学生综合素质。适度的社团活动还是我们大学生业余生活的“调味剂”与“润滑剂”。不但可以起到放松心情舒缓压力的作用，而且很多学生在加入社团后，明显的感觉到自己的沟通能力、组织能力、表达能力、处事能力等都有很大进步，性格也变得更加开朗乐观了。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="hc-bannerbg" id="2">
+                    <div class="people_intro">
+                        <h3 class="intro_title">
+                            <span>我在天文社</span>
+                        </h3>
+                        <div class="intro">
+                            <div class="intro_index">
+                                <p class="Img">
+                                    <span class="s_1"></span>
+                                    <span class="s_2"></span>
+                                    <span class="s_3"></span>
+                                    <img src="images/News_mic_iphone_128px_1184013_easyicon.net.png">
+                                </p>
+                                <div class="intro_text">
+                                    <h4>成员C</h4>
+                                    <p class="intro_detail">五彩缤纷的社团活动丰富了我们的业余生活，也为我们提供了展示自我能力与发挥创造力的舞台。不但能开阔眼界，增加人生阅历，还能提高学生综合素质。适度的社团活动还是我们大学生业余生活的“调味剂”与“润滑剂”。不但可以起到放松心情舒缓压力的作用，而且很多学生在加入社团后，明显的感觉到自己的沟通能力、组织能力、表达能力、处事能力等都有很大进步，性格也变得更加开朗乐观了。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="hc-bannerbg" id="3">
+                    <div class="people_intro">
+                        <h3 class="intro_title">
+                            <span>我在天文社</span>
+                        </h3>
+                        <div class="intro">
+                            <div class="intro_index">
+                                <p class="Img">
+                                    <span class="s_1"></span>
+                                    <span class="s_2"></span>
+                                    <span class="s_3"></span>
+                                    <img src="images/earphone_128px_1183998_easyicon.net.png">
+                                </p>
+                                <div class="intro_text">
+                                    <h4>成员D</h4>
+                                    <p class="intro_detail">五彩缤纷的社团活动丰富了我们的业余生活，也为我们提供了展示自我能力与发挥创造力的舞台。不但能开阔眼界，增加人生阅历，还能提高学生综合素质。适度的社团活动还是我们大学生业余生活的“调味剂”与“润滑剂”。不但可以起到放松心情舒缓压力的作用，而且很多学生在加入社团后，明显的感觉到自己的沟通能力、组织能力、表达能力、处事能力等都有很大进步，性格也变得更加开朗乐观了。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="popular_science_column" id="popular_science_column">
+
+        <!--此div为插件代码-->
+        <div class="flicker-example" data-block-text="false" style="float: left;">
+            <ul>
+                <li data-background="images/field.jpg">
+                    <div class="flick-title">Flickerplate Is Working</div>
+                    <div class="flick-sub-text">Heaven forbid this package you downloaded is broken. That wouldn't be embarrassing at all.</div>
+                </li>
+                <li data-background="images/forest.jpg">
+                    <div class="flick-title">Editable via Javascript or CSS</div>
+                    <div class="flick-sub-text">Take a look at the extensive documentation to see how you can change the settings in multiple ways.</div>
+                </li>
+                <li data-background="images/frozen-water.jpg">
+                    <div class="flick-title">Touch Enabled Through the jQuery Finger Library</div>
+                    <div class="flick-sub-text">jQuery Finger is a great touch library that has been included as part of the Flickerplate package.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <div class="news">
+                <div class="news_img">
+                    <img src="images/12356980,1920,10802的副本.jpg">
+                </div>
+                <div class="new" style="position:absolute;width: 15.5vw">
+                    <div class="member-info">
+                        <div class="social-touch">
+                            <span>新闻</span>
+                        </div>
+                        <h3 style="text-align: center">这是新闻</h3>
+                        <p style="text-align: center">这是内容这是内容这是内容这是内容</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="news1">
+                <div class="news_img">
+                    <img src="images/12356980,1920,10802.jpg">
+                </div>
+                <div class="new">
+                    <div class="member-info">
+                        <div class="social-touch">
+                            <span>最近天文动态</span>
+                        </div>
+                        <h3 style="text-align: center">这是标题</h3>
+                        <p style="text-align: center">这是内容这是内容</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="nums">
+                <div class="nums_pic"><img src="images/14517382,2560,1600.jpg"  id="num_pic"/></div>
+                <div class="news" id="num_new">
+                    <div class="new">
+                        <div class="member-info">
+                            <div class="social-touch">
+                                <span>主席介绍</span>
+                            </div>
+                            <h1>今日天象</h1>
+                            <p>这也是介绍这也是介绍这也是介绍这也是介绍</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="num-img">
+                    <img src="images/arrow.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="FAQ">
+        <div id="rectangle">
+            <ul class="list_left">
+                <li>天文社活动频率大概多久一次?
+                    <p>随便啊</p>
+                </li>
+                <li>如何报名参加全国天文奥赛?
+                    <p>随便报吧</p>
+                </li>
+                <li>如何借阅相关书籍?
+                    <p>去图书馆啊</p>
+                </li>
+                <li>如何调戏社长?
+                    <p>随意随意</p>
+                </li>
+                <li>如何让社长在大庭广众之下穿女装?
+                    <p>社长本来就是女的</p>
+                </li>
+            </ul>
+            <ul class="list_right">
+                <li>随便啊</li>
+            </ul>
+        </div>
+
+        <!-- 增加方块数量需要增加div需要修改的是
+  ain-wrapper
+  cubesize
+  anim(如果方块数量需要改变)
+  增加一个mainwrapper的css属性
+  定位
+-->
+        <div id="main-wrapper">
+            <div class="cube" style="--cubesize:15vw;--anim:main;">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="right"></div>
+                <div class="left"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+
+                <div class="cube smallcube" style="--cubesize:6vw;--anim:sub;">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                    <div class="right"></div>
+                    <div class="left"></div>
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+
+                    <div class="cube" style="--cubesize:3vw;">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                        <div class="right"></div>
+                        <div class="left"></div>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-wrapper2">
+            <div class="cube" style="--cubesize:10vw;--anim:main;">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="right"></div>
+                <div class="left"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+
+                <div class="cube smallcube" style="--cubesize:4vw;--anim:sub;">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                    <div class="right"></div>
+                    <div class="left"></div>
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+
+                    <div class="cube" style="--cubesize:2vw;">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                        <div class="right"></div>
+                        <div class="left"></div>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="section5 ">
+        <h3>加入我们</h3>
+        <p>您可以留下您的电子邮箱,也可以通过以下任何方式关注我们动态</p>
+        <div>
+            <input type="text " placeholder="@.com ">
+            <button type="submit ">提交</button>
+        </div>
+        <a href="#">
+            <img src="images/18.png " alt=" " width="80px " height="80px ">
+        </a>
+        <a href="#">
+            <img src="images/19.png " alt=" " width="80px " height="80px ">
+        </a>
+        <a href="#">
+            <img src="images/20.png " alt=" " width="80px " height="80px ">
+        </a>
+        <a href="#">
+            <img src="images/21.png " alt=" " width="80px " height="80px ">
+        </a>
+    </div>
+    <script src="js/test.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $('.flicker-example').flicker();
+        });
+    </script>
+    </head>
+</body>
+
+</html>

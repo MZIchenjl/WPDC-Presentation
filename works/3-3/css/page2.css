@@ -1,0 +1,101 @@
+.carousel {
+    position: relative;
+    top: 0;
+    z-index: 2;
+    transform: translateY(70px);
+    height: 80%;
+}
+
+.carousel li {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    list-style: none;
+    transition: all 0.8s;
+    border: 1px #000 solid;
+    overflow: hidden;
+}
+
+
+.imglist ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.imglist ul li .news {
+    display: inline-block;
+    background-color: rgba(192, 192, 192, 0.6);
+    width: 100%;
+    height: 34%;
+    transform: translateY(-219px);
+    text-align: center;
+    overflow: hidden;
+}
+
+.imglist ul li .news h1 {
+    font-size: 2em;
+}
+
+.imglist ul li .news .date {
+    margin-right: 80px;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.imglist ul li .news .news-content {
+    text-align: left;
+    font-size: 1.2em;
+    padding: 15px;
+    overflow: hidden;
+
+}
+
+.list1 {
+    transform: translate(0, 0) scale(0.95);
+    transform-origin: 0 100%;
+    z-index: 2
+}
+
+.list2 {
+    transform: translate(13%, 0);
+    z-index: 3;
+}
+
+.list3 {
+    transform: translate(83%, 0) scale(0.95);
+    transform-origin: 100% 100%;
+    z-index: 2
+}
+
+.list4 {
+    transform: translate(103%, 0) scale(0.95);
+    transform-origin: 100% 100%;
+}
+
+.list5 {
+    transform: translate(113%, 0) scale(0.95);
+    transform-origin: 100% 100%;
+}
+
+.list6 {
+    transform: translate(123%, 0) scale(0.95);
+    transform-origin: 100% 100%;
+}
+
+.carousel .line {
+    transform: translateY(618px);
+    text-align: center;
+}
+
+.carousel .line a {
+    display: inline-block;
+    width: 35px;
+    height: 3px;
+    background: #ccc;
+}
+
+.m-news {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}

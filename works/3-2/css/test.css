@@ -1,0 +1,473 @@
+/*初始化*/
+
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", 微软雅黑;
+    -webkit-text-size-adjust: 100%;
+    background: black;
+    overflow-x: hidden;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    word-wrap: break-word
+}
+
+
+/* 导航栏 */
+
+#navigation {
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 100;
+}
+
+#navigation ul {
+    display: flex;
+    display: -webkit-flex;
+    /* Safari */
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    color: rgb(225, 225, 225);
+    font-size: 0.85rem;
+}
+
+#navigation ul li a {
+    margin-left: 15px;
+    color: rgba(225, 225, 225, 0.7);
+}
+
+#navigation ul li a:hover {
+    color: white;
+}
+
+
+/* 轮播图css*/
+
+#gallery {
+    width: 100%;
+    position: relative;
+    font-size: 1.5vw;
+}
+
+.pictures {
+    width: 100%;
+    overflow: hidden;
+}
+
+.button {
+    display: flex;
+}
+
+.button a {
+    width: 20%;
+    height: 7px;
+    background: black;
+    border: 1px solid #aaa;
+}
+
+.button a:not(#ul_a) h2 {
+    display: none;
+}
+
+.button a:not(#ul_a) p {
+    display: none;
+}
+
+#ul_a h2 {
+    position: absolute;
+    bottom: 40%;
+    left: 30%;
+    color: rgba(225, 225, 225, 0.7);
+    font-size: 1.8em;
+}
+
+#ul_a p {
+    padding: 1.4vw;
+    width: 30vw;
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: calc(70% - 12.5em);
+    color: rgba(225, 225, 225, 0.7);
+    font-size: 0.7em;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.h1 {
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 0.5em;
+    animation: span 2s ease infinite;
+    z-index: 20;
+}
+
+.h1 span {
+    font-size: 2em;
+    letter-spacing: 0.25em;
+    background-clip: text;
+}
+
+@keyframes span {
+    0% {
+        color: linear-gradient(left, white, gray);
+    }
+    100% {
+        color: linear-gradient(left, gray, white);
+    }
+}
+
+
+/* 左右两个小按钮样式和动画 */
+
+.switch {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    z-index: 90;
+}
+
+.switch img {
+    opacity: 0.1;
+    margin: 5%;
+}
+
+.a_left:hover {
+    opacity: 0.2;
+    animation: left_arrow 0.7s infinite;
+}
+
+.a_right:hover {
+    opacity: 0.2;
+    animation: right_arrow 0.7s infinite;
+}
+
+@keyframes left_arrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-7px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes left_arrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-7px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes right_arrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(7px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes right_arrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(7px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* 主div位置大小 */
+
+#main-wrapper {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    top: 20%;
+    left: 5%;
+    perspective: 1000px;
+}
+
+#main-wrapper2 {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    bottom: 20%;
+    right: 7%;
+    perspective: 1000px;
+}
+
+
+/* 设定三个方块样式 */
+
+.cube {
+    position: absolute;
+    top: calc(50% - var(--cubesize) / 2);
+    right: calc(50% - var(--cubesize)/2);
+    width: var(--cubesize);
+    height: var(--cubesize);
+    transform-style: preserve-3d;
+    animation: var(--anim) 10s linear infinite alternate;
+}
+
+.cube .front {
+    background: rgba(0, 228, 255, 0.3) !important;
+}
+
+.smallcube {
+    animation: sub 10s linear infinite alternate-reverse;
+}
+
+.cube>div:not(.cube) {
+    position: absolute;
+    background: rgb(0, 0, 0, 0.3);
+    width: var(--cubesize);
+    height: var(--cubesize);
+    border: 1px solid rgba(255, 228, 255, 0.4);
+}
+
+
+/* 平移和旋转绘制透视三维立方 */
+
+.cube .front {
+    transform: rotateY( 0deg) translateZ(calc(var(--cubesize) / 2));
+}
+
+.cube .back {
+    transform: rotateX( 180deg) translateZ(calc(var(--cubesize) / 2));
+}
+
+
+/* 从中心向前平移1/2的边长 前后叠加*2正好是总边长 */
+
+.cube .right {
+    transform: rotateY( 90deg) translateZ(calc(var(--cubesize) / 2));
+}
+
+.cube .left {
+    transform: rotateY( -90deg) translateZ(calc(var(--cubesize) / 2));
+}
+
+.cube .top {
+    transform: rotateX( 90deg) translateZ(calc(var(--cubesize) / 2));
+}
+
+.cube .bottom {
+    transform: rotateX( -90deg) translateZ(calc(var(--cubesize) / 2));
+}
+
+
+/* 添加奇数偶数层不同步旋转的动画 */
+
+@keyframes main {
+    0% {
+        transform: translateZ(calc(-1 * var(--cubesize) / 2)) rotateY( 0deg);
+    }
+    20% {
+        transform: translateZ(calc(-1 * var(--cubesize) / 2)) rotateX( -180deg);
+    }
+    40% {
+        transform: translateZ(calc(-1 * var(--cubesize) / 2)) rotateY( -90deg);
+    }
+    60% {
+        transform: translateZ(calc(-1 * var(--cubesize) / 2)) rotateY( 90deg);
+    }
+    80% {
+        transform: translateZ(calc(-1 * var(--cubesize) / 2)) rotateX( -90deg);
+    }
+    100% {
+        transform: translateZ(calc(-1 * var(--cubesize) / 2)) rotateX( 90deg);
+    }
+}
+
+@keyframes sub {
+    0% {
+        transform: rotateY( 0deg);
+    }
+    20% {
+        transform: rotateX( -180deg);
+    }
+    40% {
+        transform: rotateY( -90deg);
+    }
+    60% {
+        transform: rotateY( 90deg);
+    }
+    80% {
+        transform: rotateX( -90deg);
+    }
+    100% {
+        transform: rotateX( 90deg);
+    }
+}
+
+
+/* FAQ样式 */
+
+#FAQ {
+    position: relative;
+    background: url("../images/blackstar.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#rectangle {
+    display: flex;
+    margin: 5% auto;
+    width: 70%;
+    padding: 5vh;
+    font-size: 1.5vw;
+}
+
+.list_left {
+    flex: 4.5;
+}
+
+.list_right {
+    flex: 5.5;
+}
+
+.list_left li {
+    display: flex;
+    width: 90%;
+    height: 5vw;
+    margin: 2vw auto;
+    border: 1px solid #aaa;
+    background: rgba(77, 85, 107, 0.5);
+    color: #aaa;
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_right li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 33.5vw;
+    border: 1px solid #aaa;
+    background: rgba(77, 85, 107, 0.5);
+    margin: 2vw auto;
+    color: #aaa;
+}
+
+.list_left p {
+    display: none;
+}
+
+
+/* 联系我们 */
+
+.section5 {
+    background: rgba(77, 85, 107, 0.5);
+    width: 100%;
+    height: 200px;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section5 h3 {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+.section5 h4 {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 2rem;
+}
+
+.section5 p {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+}
+
+.section5 div {
+    margin: 0 auto;
+}
+
+.section5 input {
+    width: 250px;
+    padding: 4.5px;
+    border: 0;
+    background: white;
+    color: #474747;
+    outline: 0;
+}
+
+.section5 button {
+    border: 0;
+    color: black;
+    background: white;
+    padding: 4px;
+}

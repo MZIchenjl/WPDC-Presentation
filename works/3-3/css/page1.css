@@ -1,0 +1,16 @@
+.ch-title {
+    width: 50vw;
+    transform: translateY(250px);
+    font-size: 50px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.en-title {
+    width: 50vw;
+    margin-left: 21px;
+    transform: translateY(270px);
+    font-size: 20px;
+    text-align: center;
+    color: chocolate;
+}

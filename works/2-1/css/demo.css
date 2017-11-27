@@ -1,0 +1,63 @@
+body
+{
+	background-color: #fff;
+	font-family:"Microsoft YaHei";
+	position: relative;
+	-webkit-text-size-adjust: none;
+	padding: 0;
+}
+
+
+
+
+@media only screen  and (max-width: 640px) {
+	nav:not(.mm-menu) {
+		display: none;
+	}
+}
+@media only screen  and (min-width: 640px) {
+	nav:not(.mm-menu) {
+		display:block;
+	}
+	.sjmenu{
+		display:none;
+		position: fixed;
+		z-index:999;
+		top:0;
+	}
+}
+.header,
+.content,
+{
+	text-align: center;
+}
+.sjmenu
+{
+	background: #ebebeb;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 40px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+}
+.header.fixed
+{
+	position: fixed;
+	top: 0;
+
+}
+
+.header a
+{
+	background: center center no-repeat transparent;
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 5px;
+}

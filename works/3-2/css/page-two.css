@@ -1,0 +1,254 @@
+body {
+    padding: 0;
+    margin: 0;
+    
+}
+
+#page-two-whole {
+    width: 100%;
+    position: relative;
+}
+.page-two-bg{
+    width: 100%;
+    
+    
+    
+}
+/* 背景 */
+.page-two-bg-part1,
+.page-two-bg-part2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+.page-two-bg-part1 {
+    background: #000 url(../images/stars.png) repeat top center;
+    z-index: -3;
+}
+
+.page-two-bg-part2 {
+    background: transparent url(../images/twinkling.png) repeat top center;
+    z-index: -3;
+    -webkit-animation: twink 200s linear infinite;
+    animation: twink 200s linear infinite;
+}
+
+@keyframes twink {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-moz-keyframes twink {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-webkit-keyframes twink {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+
+
+/* 火箭 */
+.rocketanimation>img {
+    height: 15vw;
+    width: 10vw;
+    display: block;
+    position: absolute;
+}
+
+.rocketanimation {
+    width: 40vw;
+    top: 36%;
+    left: 20%;
+    height: 20%;
+    transform: rotate(34deg);
+    transform-origin: center 100px;
+    animation: rocket 10s linear 0s infinite;
+    -webkit-animation: rocket 10s linear 0s infinite;
+    position: absolute;
+}
+
+@keyframes rocket {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    75% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* 标题 */
+
+.page-two-line-one-font {
+    width: 70%;
+    text-align: center;
+    margin: 3vw auto;
+    font-size: 3vw;
+    color: white;
+    z-index: 2000;
+}
+
+.page-two-line-one-font>span {
+    white-space: nowrap;
+}
+
+
+/* 倒三角 */
+
+.line-two-triangle {
+    width: 0px;
+    height: 0px;
+    margin: auto;
+    border-left: 1.3em solid transparent;
+    border-right: 1.3em solid transparent;
+    border-top: 1.3em solid skyblue;
+}
+
+/* 左边的方块 */
+#page-two-line-two{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.page-two-line-two-left{
+    flex:4;
+    align-items: center;
+}
+/* 左边盒子 */
+.line-two-box{
+    width: 80%;
+    height: 24vw;
+    margin: 3vw auto;
+    padding:2vw;
+    border: rgba(255, 255, 255,0.5) solid 0.5vw;
+    color: white;
+    font-size: 1.4vw;
+}
+
+
+
+/* 右边一堆 */
+.page-two-line-two-right {
+    flex: 6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.round {
+    width: 12vw;
+    height: 12vw;
+    margin-top: 3vw;
+    margin-right: 2vw;
+    border-radius: 50%;
+    font-size:2vw;
+    background-size: 100%;
+    transform: scaleY(1);
+}
+
+.round img {
+    z-index: 100;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(1);
+    display: block;
+}
+
+.round .round-hidden {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 0.5s linear;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 200;
+}
+
+.round h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    transform: scale(0);
+    color: white;
+    font-size: 0.8em;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+
+/* hover隐藏 */
+.round:hover img {
+    opacity: 0.6;
+}
+
+.round:hover .round-hidden {
+    opacity: 1;
+}
+
+.round:hover h2 {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.border-spinning {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-left: 0.5vw solid lightgreen;
+    border-top: 0.5vw solid lightgreen;
+    border-bottom: 0.5vw solid skyblue;
+    border-right: 0.5vw solid skyblue;
+    position: absolute;
+    top: 0;
+    z-index: 1200;
+    transition: all .8s ease-in-out
+}
+
+
+.round:hover .border-spinning {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+

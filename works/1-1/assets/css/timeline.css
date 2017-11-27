@@ -1,0 +1,166 @@
+.Article dl {
+    position: relative;
+    top: 0;
+    padding: 20px 0;
+    margin: 0
+}
+
+.Article dl:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 2px;
+    margin-left: -1px;
+    content: '';
+    background-color: #ccd1d9
+}
+
+.Article dl dt {
+    position: relative;
+    top: 30px;
+    z-index: 2;
+    width: 120px;
+    padding: 3px 5px;
+    margin: 0 auto 30px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    background-color: #394662;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px
+}
+
+.Article dl dd {
+    position: relative;
+    z-index: 1
+}
+
+.Article dl dd .circle {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    margin-left: -11px;
+    background-color: #fdb933;
+    border: 4px solid #f5f7fa;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%
+}
+
+
+.Article dl dd .concent {
+    position: relative;
+    width: 47%;
+    padding: 10px 0 0;
+    margin-top: 31px;
+    background-color: #394662;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;    
+    box-shadow: 3px 3px 3px #dfdfdf;
+}
+
+.Article dl dd .concent:before {
+    /*箭头修饰*/
+    position: absolute;
+    top: 12px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-style: solid;
+    border-width: 7px;
+}
+
+.Article dl dd .concent .concent-object {
+    margin: 0 auto;
+}
+
+.Article dl dd .concent .concent-header {
+    min-height: 30px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.Article dl dd .concent .concent-body {
+    overflow: hidden;
+    zoom: 1;
+    background-color: white;
+    padding: 10px;    
+}
+
+
+.Article dl dd .concent .concent-body .concent-desc {
+    text-indent: 2em;
+    padding: 0 15px;
+    color: #394662;
+}
+.Article dl dd.pos-right .concent {
+    float: right
+}
+
+.Article dl dd.pos-right .concent:before {
+    left: -12px;
+    border-color: transparent #394662 transparent transparent
+}
+
+.Article dl dd.pos-left .concent {
+    float: left
+}
+
+.Article dl dd.pos-left .concent:before {
+    right: -12px;
+    border-color: transparent transparent transparent #394662;
+}
+
+.Article .carousel-indicators{
+    bottom: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .Article dl:before {
+        left: 90px
+    }
+    .Article dl dt {
+        margin: 0 30px 30px
+    }
+    .Article dl dd .circle {
+        left: 90px
+    }
+    .Article dl dd.pos-left .concent {
+        float: right;
+        width: 73%;
+        margin-right: 4%;
+    }
+    .Article dl dd.pos-left .concent:before {
+        left: -12px;
+        border-color: transparent #394662 transparent transparent
+    }
+    .Article dl dd.pos-right .concent {
+        float: right;
+        width: 73%;
+        margin-right: 4%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .Article dl dd.pos-left .concent {
+        float: right;
+        width: 63%;
+        margin-right: 4%;
+    }
+    .Article dl dd.pos-right .concent {
+        float: right;
+        width: 63%;
+        margin-right: 4%;
+    }
+}

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="favicon.ico">
+		<title>科协-部门</title>
+		<!--响应式 Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!-- 主要CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/按钮.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet" type="text/css">
+		<!--二级菜单-->
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<style type="text/css">
+			.banner {
+				height: 20%;
+			}
+			
+			.lishish {
+				padding-top: 20px;
+			}
+		</style>
+
+	</head>
+
+	<body id="page-top">
+		<!--二级滑动菜单开始-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".flip").mouseover(function() {
+					$(this).next("div").slideDown(400);
+				});
+				$(".content").mouseleave(function() {
+					$(this).children("div").slideUp(400);
+				});
+			});
+		</script>
+		<style type="text/css">
+			div.panel,
+			p.flip {
+				margin: 0px;
+				padding: 5px;
+				text-align: center;
+				border: hidden 0px #000000;
+			}
+			
+			div.panel {
+				height: auto;
+				display: none;
+			}
+		</style>
+		<!--二级滑动菜单结束-->
+		<nav class="navbar navbar-default navbar-fixed-top noBorder" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand brandStyle">南邮科协</a>
+				</div>
+
+				<div class="collapse navbar-collapse noPadding" id="myNavbar">
+					<div class="navbar-right menustyle">
+						<ul class="nav navbar-nav">
+
+							<div class="content ss">
+								<p class="flip">
+									<a href="index.html" style="color: red;">首页</a>
+								</p>
+							</div>
+							<div class="content" style="float:left;display:block;width:100px;">
+								<p class="flip">
+									<a href="department.html" style="color: red;">部门职能</a>
+								</p>
+								<div class="panel" style="display: none;">
+									<p>
+										<a href="department.html#dianzi">电子部</a>
+									</p>
+									<p>
+										<a href="department.html#jisuanji">计算机部</a>
+									</p>
+									<p>
+										<a href="department.html#meixuan">媒宣部</a>
+									</p>
+									<p>
+										<a href="department.html#bangongshi">办公室</a>
+									</p>
+								</div>
+							</div>
+							<div class="content ss">
+								<p class="flip">
+									<a href="">协会概括</a>
+								</p>
+								<div class="panel">
+									<p>
+										<a href="">简介</a>
+									</p>
+									<p>
+										<a href="">部门</a>
+									</p>
+									<p>
+										<a href="">历史</a>
+									</p>
+									<p>
+										<a href="">人事</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="content ss">
+								<p class="flip">
+									<a href="">活动</a>
+								</p>
+								<div class="panel">
+									<p>
+										<a href="">近期活动</a>
+									</p>
+									<p>
+										<a href="">历史活动</a>
+									</p>
+									<p>
+										<a href="">活动概览</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="content ss">
+								<p class="flip">
+									<a href="">比赛</a>
+								</p>
+								<div class="panel" style="display: none;">
+									<p>
+										<a href="">科技节</a>
+									</p>
+									<p>
+										<a href="">电子设计大赛</a>
+									</p>
+									<p>
+										<a href="">网页制作大赛</a>
+									</p>
+								</div>
+							</div>
+							<div class="content" style="float:left;display:block;width:100px;">
+								<p class="flip">
+									<a href="">资源</a>
+								</p>
+								<div class="panel">
+									<p>
+										<a href="">视频资料</a>
+									</p>
+									<p>
+										<a href="">优质文章</a>
+									</p>
+									<p>
+										<a href="">历年作品</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="content" style="float:left;display:block;width:100px;">
+								<p class="flip">
+									<a href="">项目开发</a>
+								</p>
+								<div class="panel">
+									<p>
+										<a href="">APP开发</a>
+									</p>
+									<p>
+										<a href="">网页制作</a>
+									</p>
+									<p>
+										<a href="">产品设计</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="content" style="float:left;display:block;width:100px;">
+								<p class="flip">
+									<a href="">论坛</a>
+								</p>
+							</div>
+							<div class="content" style="float:left;display:block;width:100px;">
+								<p class="flip">
+									<a href="team.html" style="color: red;">我们的团队</a>
+								</p>
+							</div>
+
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+		<section id="portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h1>社团的结构</h1>
+							<p>在本次的网页制作过程中我们主题使用了bootstrap的环境并且在js方面尝试运用了jquery希望大家能够喜欢</p>
+						</div>
+					</div>
+                    
+                    <!--此处为电子部具体介绍-->
+					<div class="row row-0-gutter" id="dianzi">
+						<div class="col-lg-12 col-0-gutter">
+							<div class="ot-portfolio-item">
+								<figure class="effect-bubba">
+									<img src="images/demo/电.jpg" alt="img01" class="img-responsive" />
+									<figcaption>
+										<h1>电子部</h1>
+										<p>电子部负责单片机以及微控制器、电路、仿真等相关授课工作，<br>同时举办科技活动、讲座、竞赛以服务于大学生，在各位有技术特长的学长学姐和有兴趣的同学们的团结协作下，<br>竭力为电院输送一批技术型人才。
+										</p>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+        
+		<section id="aboutwrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 ">
+						<img class="img-responsive" src="images/demo/2.jpg">
+					</div>
+					<div class="col-lg-6 name-desc">
+						<h2>电子部授课计划与方向</h2>
+
+						<div class="col-md-6">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+						</div>
+						<div class="col-md-6">
+							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+        
+        <!--此处为计算机部具体介绍-->
+		<section id="portfolio">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-12 col-0-gutter" id="jisuanji">
+						<div class="ot-portfolio-item">
+							<figure class="effect-bubba">
+								<img src="images/demo/jsj.jpg" alt="img02" class="img-responsive" />
+								<figcaption>
+									<h1>计算机部</h1>
+									<p>电子部负责单片机以及微控制器、电路、仿真等相关授课工作， 同时举办科技活动、讲座、竞赛以服务于大学生， 在各位有技术特长的学长学姐和有兴趣的同学们的团结协作下，竭力为电院输送一批技术型人才。
+									</p>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="aboutwrap">
+			<div class="container">
+				<div class="col-lg-6 name-desc">
+					<h2>计算机部授课计划与方向</h2>
+
+					<div class="col-md-6">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+					</div>
+					<div class="col-md-6">
+						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+						<p> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+					</div>
+
+				</div>
+				<div class="col-lg-6 ">
+					<img class="img-responsive" src="images/demo/3.jpg">
+				</div>
+
+			</div>
+			</div>
+		</section>
+        
+        <!--此处为媒宣部具体介绍-->
+		<section id="portfolio">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-12 col-0-gutter" id="meixuan">
+						<div class="ot-portfolio-item">
+							<figure class="effect-bubba">
+								<img src="images/demo/媒体.jpg" alt="img02" class="img-responsive" />
+								<figcaption>
+									<h1>媒体宣传部</h1>
+									<p>电子部负责单片机以及微控制器、电路、仿真等相关授课工作， 同时举办科技活动、讲座、竞赛以服务于大学生， 在各位有技术特长的学长学姐和有兴趣的同学们的团结协作下， 竭力为电院输送一批技术型人才。
+									</p>
+									<a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+		<section id="aboutwrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 ">
+						<img class="img-responsive" src="images/demo/1.jpg">
+					</div>
+					<div class="col-lg-6 name-desc">
+						<h2>媒宣部授课计划与方向</h2>
+
+						<div class="col-md-6">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+						</div>
+						<div class="col-md-6">
+							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+            
+		</section>
+        
+        <!--此处为办公室具体介绍-->
+		<section id="portfolio">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-12 col-0-gutter" id="bangongshi">
+						<div class="ot-portfolio-item">
+							<figure class="effect-bubba">
+								<img src="images/demo/办.jpg" alt="img02" class="img-responsive" />
+								<figcaption>
+									<h1>办公室</h1>
+									<p>电子部负责单片机以及微控制器、电路、仿真等相关授课工作， 同时举办科技活动、讲座、竞赛以服务于大学生， 在各位有技术特长的学长学姐和有兴趣的同学们的团结协作下， 竭力为电院输送一批技术型人才。
+									</p>
+									<a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- container -->
+		</section>
+		<section id="aboutwrap">
+			<div class="container">
+				<div class="col-lg-6 name-desc">
+					<h2>办公室授课计划与方向</h2>
+
+					<div class="col-md-6">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+					</div>
+					<div class="col-md-6">
+						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+						<p> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+					</div>
+
+				</div>
+			
+				<div class="col-lg-6 ">
+					<img class="img-responsive" src="images/demo/3.jpg">
+					
+				</div>
+
+			</div>
+			
+			</div>
+			
+		</section>
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2>加入我们</h2>
+							<p>如果你也对科技感兴趣，
+								</br>如果你爱分享你的创新ideo，
+								</br>如果你也想有一个大施拳脚的场所，
+								</br>我们期待你的到来！</p>
+						</div>
+					</div>
+				</div>
+                
+                 <!--联系栏-->
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<form name="sentMessage" id="contactForm" novalidate>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="你的名字 *" id="name" required data-validation-required-message="Please enter your name.">
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="email" class="form-control" placeholder="你的邮箱 *" id="email" required data-validation-required-message="Please enter your email address.">
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea class="form-control" placeholder="想和我们说点什么 *" id="message" required data-validation-required-message="Please enter a message." style="overflow:hidden;"></textarea>
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12 text-center">
+									<div id="success"></div>
+									<button type="submit" class="btn">发送</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+        <!--回到顶端-->
+		<p id="back-top">
+			<a href="#top"><i class="fa fa-angle-up"></i></a>
+		</p>
+        
+        <script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/SmoothScroll.js"></script>
+		<script src="js/theme-scripts.js"></script>
+		<script src="js/myscript.js"></script>
+	</body>
+
+</html>

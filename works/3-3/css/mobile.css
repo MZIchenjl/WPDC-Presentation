@@ -1,0 +1,234 @@
+      @media screen and (max-width:825px) {
+          .carousel,
+          .tit {
+              overflow: hidden;
+              opacity: 0;
+              height: 0;
+          }
+          .swiper-container {
+              position: absolute;
+              z-index: 1;
+              width: 100%;
+              height: 100%;
+          }
+          .logo,
+          .logo a {
+              font-size: 0;
+              line-height: 0;
+              height: 0;
+              opacity: 0;
+          }
+          .ch-title {
+              transform: translateY(230px);
+              width: 100%;
+              font-size: 2em;
+          }
+          .en-title {
+              width: 90%;
+              font-size: 1em;
+              transform: translateY(250px);
+          }
+          .square ul li {
+              width: 57.5%;
+              height: 52%;
+          }
+          @keyframes ghostRow {
+              100% {
+                  width: 91%;
+              }
+          }
+
+          @keyframes ghostCol {
+              100% {
+                  height: 83%;
+              }
+          }
+          .square ol li:first-child {
+              transform: translateY(-7.2em);
+              font-size: 0.5em;
+          }
+          .square ol li:last-child {
+              transform: translateY(3em);
+              font-size: 0.5em;
+          }
+          .square ul li:last-child {
+              transform: translateY(5.6em);
+          }
+          footer {
+              transform: translateY(-1.6em);
+          }
+          .card:hover .card__thumb {
+              height: 0;
+              transform: translateY(-5px);
+          }
+          .outcard li {
+              height: 29%;
+          }
+          .card__thumb {
+              height: 41%;
+          }
+          .card__title {
+              margin: 0.1em;
+              padding: 0.1em;
+              font-size: 1em;
+          }
+          .card__subtitle {
+              margin: 0.1em;
+              padding: 0.1em;
+              font-size: 1em;
+          }
+          .card__description {
+              text-overflow: ellipsis;
+              overflow-x: hidden;
+              white-space: nowrap;
+              font-size: 0.6em;
+          }
+          .m-news {
+              opacity: 1;
+              width: 100%;
+              height: 40%;
+          }
+          .m-news1 {
+              background: url("../img/news1.jpg") no-repeat top left/100% 100%;
+          }
+
+          .m-news2 {
+              background: url("../img/news2.jpg") no-repeat top left/100% 100%;
+          }
+
+          .m-news3 {
+              background: url("../img/news3.jpg") no-repeat top left/100% 100%;
+          }
+
+          .m-news4 {
+              background: url("../img/news4.jpg") no-repeat top left/100% 100%;
+          }
+
+          .m-news5 {
+              background: url("../img/news5.jpg") no-repeat top left/100% 100%;
+          }
+
+          .m-news6 {
+              background: url("../img/news6.jpg") no-repeat top left/100% 100%;
+          }
+
+          .swiper-slide h1 {
+              position: absolute;
+              top: 42%;
+              font-size: 2.2em;
+              line-height: 2.2em;
+          }
+          .swiper-slide .date {
+              position: absolute;
+              top: 52%;
+              right: 8%;
+              font-size: 1.2em;
+
+          }
+          .swiper-slide .news-content {
+              position: absolute;
+              top: 60%;
+              font-size: 1.6em;
+              line-height: 1.4em;
+
+          }
+
+      }
+
+      @media screen and (max-width:425px) {
+          .swiper-slide h1 {
+              position: absolute;
+              top: 42%;
+              font-size: 2.2em;
+              line-height: 1.4em;
+          }
+          .swiper-slide .date {
+              position: absolute;
+              top: 52%;
+              right: 8%;
+              font-size: 1.5em;
+
+          }
+          .swiper-slide .news-content {
+              position: absolute;
+              top: 57%;
+              font-size: 1.2em;
+              line-height: 1.7em;
+
+          }
+      }
+
+      @media screen and (min-width:825px)and (max-width:1050px) {
+          .square ol li:first-child {
+              transform: translateY(0.8em);
+              font-size: 1.2em;
+          }
+          .square ol li:last-child {
+              transform: translateY(0.8em);
+              font-size: 1.2em;
+          }
+          .square ul li {
+              width: 48%;
+              height: 50%;
+          }
+      }
+
+      @media screen and (min-width:420px) and (max-width:825px) {
+          .square ul li {
+              width: 49%;
+              height: 56%;
+          }
+      }
+
+      @media screen and (max-width:1400px) and (min-width:1021px) {
+          .mh-menu li:hover .page4-content {
+              left: 45%;
+          }
+          .mh-menu li:hover img {
+              left: 0%;
+              opacity: 0;
+          }
+          .introduce {
+              left: 44%;
+          }
+          .introduce h3,
+          .introduce p {
+              opacity: 0;
+          }
+
+      }
+
+      @media screen and (max-width:1020px) {
+          .mh-menu {
+              transform: translate(-13em, 0em);
+          }
+          .introduce {
+              width: 52%;
+              height: 74%;
+              left: 45%;
+          }
+          .mh-menu li:hover img {
+              left: 0%;
+              opacity: 0;
+          }
+          .introduce h3,
+          .introduce p {
+              opacity: 0;
+          }
+          .mh-menu li:hover .page4-content {
+              left: 92%;
+          }
+          .mh-menu li .page4-content {
+              width: 54%;
+              height: 100%;
+              line-height: 2.4em;
+              top: 14%;
+              font-size: 1.2em;
+          }
+      }
+
+      @media screen and (max-width:1020px)and (min-width:600px) {
+          .mh-menu li:hover .page4-content {
+              left: 69%;
+          }
+      }

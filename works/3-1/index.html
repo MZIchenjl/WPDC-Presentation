@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/amazeui.swiper.min.css"/>
+    <link rel="stylesheet" href="./assets/css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="./assets/css/animations.css"/>
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/amazeui.swiper.min.js"></script>
+    <script src="./assets/js/modernizr.custom.js"></script>
+    <title>CG爱好者协会</title>
+    <script>
+        // Tab移动动画
+        // 当前页面移动完毕
+        var endCurrPage = false;
+        // 后续页面移动完毕
+        var endNextPage = false;
+        // 根据浏览器选择事件名称
+        var animEndEventNames = {
+			'WebkitAnimation' : 'webkitAnimationEnd',
+			'OAnimation' : 'oAnimationEnd',
+			'msAnimation' : 'MSAnimationEnd',
+			'animation' : 'animationend'
+		},
+		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ]
+        // 保存各个元素当前的class
+        $(function() {
+            $(".content-texts").each(function() {
+                var $page = $ (this);
+                $page.data('originalClassList', $page.attr('class'));
+            });
+            $(".content-numbers").each(function() {
+                var $page = $ (this);
+                $page.data('originalClassList', $page.attr('class'));
+            });
+            $(".content-numbers").eq(0).addClass("current-active");
+            $(".content-texts").eq(0).addClass("current-active");
+        });
+
+        var nowIndex = 0;
+        // 切换函数
+        function changePage(action) // 0 == prev, 1 == next
+        {
+            // 进入与退出动画
+            if (action === 1) {
+                var inClass = 'pt-page-moveFromRightFade';
+                var outClass = 'pt-page-moveToLeftFade';
+            } else {
+                var inClass = 'pt-page-moveFromLeftFade';
+                var outClass = 'pt-page-moveToRightFade';
+            }
+            // 获取元素
+            var numberElements = $(".content-numbers");
+            var contentElements = $(".content-texts");
+            // 获取当前激活元素
+            var currentNumber = numberElements.eq(nowIndex);
+            var currentContent = contentElements.eq(nowIndex);
+            // 获取索引
+            $currPage = currentContent;
+            // 设置下一页
+            if (action === 1) {
+                if (nowIndex === contentElements.length - 1) {
+                    nowIndex = -1;
+                }
+                $nextPage = contentElements.eq(++nowIndex);
+            } else {
+                if (nowIndex === 0) {
+                    nowIndex = contentElements.length;
+                }
+                $nextPage = contentElements.eq(--nowIndex);
+            }
+            // 清除播放中的动画
+            $(".content-texts").each(function(){
+                $(this).attr('class', $(this).data('originalClassList'));
+            });
+            // 动画
+            $currPage.addClass("current-active");
+            $nextPage.addClass("current-active");
+            pageAddClass($currPage, $nextPage);
+            // 标题的数字，同理
+            $currPage = currentNumber;
+            $nextPage = numberElements.eq(nowIndex);
+            $(".content-numbers").each(function(){
+                $(this).attr('class', $(this).data('originalClassList'));
+            });
+            $currPage.addClass("current-active");
+            $nextPage.addClass("current-active");
+            pageAddClass($currPage, $nextPage);
+            // 动画函数
+            function pageAddClass($currPage, $nextPage) {
+                // 新元素进入
+                $currPage.addClass(outClass).on(animEndEventName, function() {
+                    $currPage.off(animEndEventName);
+                    endCurrPage = true;
+                    if (endNextPage) {
+                        onEndAnimation($currPage, $nextPage);
+                    }
+                });
+                // 旧元素退出
+                $nextPage.addClass(inClass).on(animEndEventName, function() {
+                    $nextPage.off(animEndEventName);
+                    endNextPage = true;
+                    if (endCurrPage) {
+                        onEndAnimation($currPage, $nextPage);
+                    }
+                });
+            }
+        }
+        // 动画完成后
+        function onEndAnimation($outpage, $inpage) {
+            endCurrPage = false;
+            endNextPage = false;
+            $outpage.attr('class', $outpage.data('originalClassList'));
+            $inpage.attr('class', $outpage.data('originalClassList') + ' current-active');
+        }
+    </script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div id="navbar">
+        <!-- 左边标题 -->
+        <span class="navbar-title">
+            <span class="navbar-item">CG爱好者协会.</span>
+        </span>
+        <!-- 右边链接 -->
+        <span class="items">
+            <span class="navbar-item">Home</span>
+            <span class="navbar-item">Service</span>
+            <span class="navbar-item">Team</span>
+            <span class="navbar-item">Work</span>
+            <span class="navbar-item">Contact us</span>
+        </span>
+    </div>
+    <!-- 大播放器图片 -->
+    <div id="player-container">
+        <img src="./assets/images/player.png" style="width: 100%;"/>
+        <!-- 主标题 -->
+        <div id="CG">CG爱好者协会</div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="swiper-container" id="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./assets/images/img01.png" alt="img01" style="width: 100%; height: auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/img02.png" alt="img02" style="width: 100%; height: auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/img03.png" alt="img03" style="width: 100%; height: auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/img04.png" alt="img04" style="width: 100%; height: auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/img05.png" alt="img05" style="width: 100%; height: auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/img06.png" alt="img06" style="width: 100%; height: auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/img07.png" alt="img07" style="width: 100%; height: auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/img08.png" alt="img08" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图上小图标 -->
+    <div id="icons">
+        <img class="icon" src="./assets/images/vimeo.png" />
+        <img class="icon" src="./assets/images/twitter29.png" />
+        <img class="icon" src="./assets/images/dribbble6.png" />
+    </div>
+    <!-- 轮播图控制点 -->
+    <div id="pagination-container">
+        <div id="pagination">
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <script>
+        // 载入轮播图，支持鼠标滚轮和点击操作
+        $('#swiper').swiper({
+            pagination: '#pagination .swiper-pagination',
+            paginationClickable: true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false,
+            loop: true,
+        });
+
+        
+    </script>
+    <!-- 中间内容 -->
+    <div id="content-container">
+        <!-- 底纹 -->
+        <div id="content-texture" class="angled-135"></div>
+        <!-- 序号 -->
+        <div id="content-number">
+            <span id="content-number-1" class="content-numbers">01</span>
+            <span id="content-number-2" class="content-numbers">02</span>
+            <span id="content-number-3" class="content-numbers">03</span>
+            <span id="content-number-4" class="content-numbers">04</span>
+        </div>
+        <!-- 内容标题 -->
+        <div id="content-title"><span style="color: black;">"WHAT-IS</span><br>Computer<br>Graphics"</div>
+        <!-- 内容正文 -->
+        <div id="content-text-container">
+            <div id="content-text-1" class="content-texts">
+                <b style="font-size: 1.7vw; font-family: Helvetica; letter-spacing: 0.4vw;">CG-</b>原为Computer Graphics的英文缩写。<br>
+                随着以计算机为主要工具进行视觉设计和生产的一系列相关产业的形成，国际上习惯将利用计算机技术进行视觉设计和生产的领域通称为CG。
+            </div>
+            <div id="content-text-2" class="content-texts">
+                它既包括技术也包括艺术，几乎囊括了当今电脑时代中所有的视觉艺术创作活动，如平面印刷品的设计、网页设计、三维动画、影视特效、多媒体技术、以计算机辅助设计为主的建筑设计及工业造型设计等。
+            </div>
+            <div id="content-text-3" class="content-texts">
+                从二维到三维，从平面印刷、网页设计行业到三维动画，影视特效行业，CG随着技术的不断提高，应用的领域也在不断的壮大着，现今更是形成了一个可观的经济产业。
+            </div>
+            <div id="content-text-4" class="content-texts">
+                在这短短十几年，CG以高端科学技术为依托，以无限的创意为内容，彻底颠覆了传统视觉时代，开辟了流光溢彩的图像新时代，CG动画给影视和游戏强国带来了近千亿美元的经济利润。可以说，CG已经在美国和日本等国形成了一种产业，深刻影响着他们的经济和文化发展。
+            </div>
+            <img src="./assets/images/next-arrow.png" id="next-arrow" class="arrows" onclick="changePage(1);"/>
+        </div>
+        <!-- 正文配图 -->
+        <div id="content-image"></div>
+        <div id="image-text"><span>Mercedes-Benz</span><br><span style="font-size: 1.2vw;">&emsp;&emsp;&emsp;&emsp;--by Spellwork Pictures</span></div> 
+    </div>
+    <!-- 页脚 -->
+    <div id="footer">
+        <!-- 页脚图标 -->
+        <div id="footer-icons">
+            <img class="footer-icon" src="./assets/images/twitter3.png" />
+            <img class="footer-icon" src="./assets/images/instagram7.png" />
+            <img class="footer-icon" src="./assets/images/facebook31.png" />
+        </div>
+        <!-- 按钮 -->
+        <div id="button-container">
+            <div class="footer-line footer-line-left"></div>
+            <span id="join-us-button" class="join-us-button">JOIN&nbsp;&nbsp;US</span>
+            <div class="footer-line footer-line-right"></div>
+        </div>
+        <!-- 末尾三角形 -->
+        <div id="triangles-container">
+            <div id="triangle-left"></div>
+            <div id="triangle-right"></div>
+            <div id="triangle-right-back"></div>
+        </div>
+    </div>.
+</body>
+</html>

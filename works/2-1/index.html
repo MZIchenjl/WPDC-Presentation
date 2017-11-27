@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon.ico">
+<title>科协-首页</title>
+<!--响应式 Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- 主要CSS -->
+<link href="css/style.css" rel="stylesheet">
+<link href="css/按钮.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<!--二级菜单-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+.banner {
+	height: 20%;
+}
+.lishish {
+	padding-top: 20px;
+}
+</style>
+</head>
+
+<body id="page-top">
+<!--二级滑动菜单开始--> 
+<script type="text/javascript">
+			$(document).ready(function() {
+				$(".flip").mouseover(function() {
+					$(this).next("div").slideDown(400);
+				});
+				$(".content").mouseleave(function() {
+					$(this).children("div").slideUp(400);
+				});
+			});
+		</script>
+<style type="text/css">
+			div.panel,
+			p.flip {
+				margin: 0px;
+				padding: 5px;
+				text-align: center;
+				border: hidden 0px #000000;
+			}
+			
+			div.panel {
+				height: auto;
+				display: none;
+			}
+    
+		</style>
+<!--二级滑动菜单结束-->
+
+<nav class="navbar navbar-default navbar-fixed-top noBorder" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand brandStyle">南邮科协</a> </div>
+    <div class="collapse navbar-collapse noPadding" id="myNavbar">
+      <div class="navbar-right menustyle">
+        <ul class="nav navbar-nav">
+          <div class="content ss">
+            <p class="flip"> <a href="index.html" style="color: red;">首页</a> </p>
+          </div>
+          <div class="content" style="float:left;display:block;width:100px;">
+            <p class="flip"> <a href="department.html" style="color: red;">部门职能</a> </p>
+            <div class="panel" style="display: none;">
+              <p> <a href="department.html#dianzi">电子部</a> </p>
+              <p> <a href="department.html#jisuanji">计算机部</a> </p>
+              <p> <a href="department.html#meixuan">媒宣部</a> </p>
+              <p> <a href="department.html#bangongshi">办公室</a> </p>
+            </div>
+          </div>
+          <div class="content ss">
+            <p class="flip"> <a href="">协会概括</a> </p>
+            <div class="panel">
+              <p> <a href="">简介</a> </p>
+              <p> <a href="">部门</a> </p>
+              <p> <a href="">历史</a> </p>
+              <p> <a href="">人事</a> </p>
+            </div>
+          </div>
+          <div class="content ss">
+            <p class="flip"> <a href="">活动</a> </p>
+            <div class="panel">
+              <p> <a href="">近期活动</a> </p>
+              <p> <a href="">历史活动</a> </p>
+              <p> <a href="">活动概览</a> </p>
+            </div>
+          </div>
+          <div class="content ss">
+            <p class="flip"> <a href="">比赛</a> </p>
+            <div class="panel" style="display: none;">
+              <p> <a href="">科技节</a> </p>
+              <p> <a href="">电子设计大赛</a> </p>
+              <p> <a href="">网页制作大赛</a> </p>
+            </div>
+          </div>
+          <div class="content" style="float:left;display:block;width:100px;">
+            <p class="flip"> <a href="">资源</a> </p>
+            <div class="panel">
+              <p> <a href="">视频资料</a> </p>
+              <p> <a href="">优质文章</a> </p>
+              <p> <a href="">历年作品</a> </p>
+            </div>
+          </div>
+          <div class="content" style="float:left;display:block;width:100px;">
+            <p class="flip"> <a href="">项目开发</a> </p>
+            <div class="panel">
+              <p> <a href="">APP开发</a> </p>
+              <p> <a href="">网页制作</a> </p>
+              <p> <a href="">产品设计</a> </p>
+            </div>
+          </div>
+          <div class="content" style="float:left;display:block;width:100px;">
+            <p class="flip"> <a href="">论坛</a> </p>
+          </div>
+          <div class="content" style="float:left;display:block;width:100px;">
+            <p class="flip"> <a href="team.html" style="color: red;">我们的团队</a> </p>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--手机导航栏-->
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="section-title">
+          <h2>科学技术协会</h2>
+          <p>科协是一个致力于丰富校园文化生活，加强同学间交流的，进一步让部员掌握各种科学技术知识、了解软件、钻研技术、进行实践操作的科技性社团。</p>
+        </div>
+      </div>
+      <div class="row row-0-gutter"> 
+        <!-- 电子部介绍区 -->
+        <div class="col-md-6 col-0-gutter">
+          <div class="ot-portfolio-item">
+            <figure class="effect-bubba"> <img src="images/demo/电子部_副本.jpg" alt="img02" class="img-responsive" />
+              <figcaption>
+                <h2>电子部</h2>
+                <p>电子部负责单片机以及微控制器、电路、仿真等相关授课工作， 同时举办科技活动、讲座、竞赛以服务于大学生， 在各位有技术特长的学长学姐和有兴趣的同学们的团结协作下， 竭力为电院输送一批技术型人才。 </p>
+                <a href="#" data-toggle="modal" data-target="#Modal-1">View more</a> </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!--电子部介绍结束--> 
+        <!-- 计算机部介绍区-->
+        <div class="col-md-6 col-0-gutter">
+          <div class="ot-portfolio-item">
+            <figure class="effect-bubba"> <img src="images/demo/计算机部_副本.jpg" alt="img02" class="img-responsive" />
+              <figcaption>
+                <h2>计算机部</h2>
+                <p>计算机部承担科协对于软件相关能力技术的培养任务， 主要侧重于WEB前端、后端及数学建模相关软件使用和开发等方面。 </p>
+                <a href="#" data-toggle="modal" data-target="#Modal-2">View more</a> </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!--计算机部介绍结束 --> 
+      </div>
+      <div class="row row-0-gutter"> 
+        <!-- 媒宣部介绍区 -->
+        <div class="col-md-6 col-0-gutter">
+          <div class="ot-portfolio-item">
+            <figure class="effect-bubba"> <img src="images/demo/媒宣部_副本.jpg" alt="img02" class="img-responsive" />
+              <figcaption>
+                <h2>媒宣部</h2>
+                <p>媒体宣传部是科协对外宣传的窗口，是展现科协人风采的直接平台。 用文字、图片、视频的方式记录科协中的大小事务。 </p>
+                <a href="#" data-toggle="modal" data-target="#Modal-3">View more</a> </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- 媒宣部介绍结束--> 
+        <!-- 办公室介绍区 -->
+        <div class="col-md-6 col-0-gutter">
+          <div class="ot-portfolio-item">
+            <figure class="effect-bubba"> <img src="images/demo/办公室_副本.jpg" alt="img02" class="img-responsive" />
+              <figcaption>
+                <h2>办公室</h2>
+                <p>办公室是科协的运作筹划中心，是科协内部管理的枢纽和对外联系的窗口。 统筹安排科协各项比赛及讲座相关事宜，也负责科协的经费收支。 </p>
+                <a href="#" data-toggle="modal" data-target="#Modal-4">View more</a> </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!--办公室介绍结束--> 
+      </div>
+    </div>
+  </div>
+  <!-- container --> 
+</section>
+<section id="about" class="mz-module">
+  <div class="container light-bg">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="section-title">
+          <h2>部门职能</h2>
+        </div>
+      </div>
+    </div>
+    
+    <!--部门职能区-->
+    <div class="row row-0-gutter">
+      <div class="col-md-3 col-0-gutter mz-about-default text-center">
+        <div class="mz-module-about"> <i class="fa fa-cogs ot-circle"></i>
+          <h3>电子部</h3>
+          <p>进行51单片机、STM32微控制器等硬件编程的授课，模拟电路以及数字逻辑电路的设计与制作，仿真软件教学...</p>
+          <a class="button black bigrounded" href="department.html#dianzi">More</a> </div>
+      </div>
+      <div class="col-md-3 col-0-gutter mz-about-dark text-center">
+        <div class="mz-module-about"> <i class="fa fa-laptop ot-circle"></i>
+          <h3>计算机部</h3>
+          <p>每周根据授课计划对计算机部 或科协成员集中授课，培养成员的编程能力，负责科协相关网站制作，维护与完善...</p>
+          <a class="button black bigrounded"href="department.html#jisuanji">More</a> </div>
+      </div>
+      <div class="col-md-3 col-0-gutter mz-about-default text-center">
+        <div class="mz-module-about"> <i class="fa fa-camera-retro ot-circle"></i>
+          <h3>媒宣部</h3>
+          <p>进行多媒体后期处理软件的培训，为科协制作宣传视频，维护科协的微信公众号，负责科协活动照片的拍摄...</p>
+          <a class="button black bigrounded"href="department.html#meixuan">More</a> </div>
+      </div>
+      <div class="col-md-3 col-0-gutter mz-about-dark text-center">
+        <div class="mz-module-about"> <i class="fa fa-cube ot-circle"></i>
+          <h3>办公室</h3>
+          <p>活动策划活动文件的发放，管理科协主要经费收支，对部员进行PS，WORD，EXCEL等办公软件的简单教授...</p>
+          <a class="button black bigrounded"href="department.html#bangongshi">More</a> </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--团队介绍区-->
+
+<section id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="section-title">
+          <h2>我们的团队</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row"> 
+      <div class="col-md-4">
+        <div class="team-item">
+          <div class="team-image"> <img src="images/demo/portfolio-2.jpg" class="img-responsive" alt="author"> </div>
+          <div class="team-text">
+            <h3>王瑞昕</h3>
+            <div class="team-position">前端讲师</div>
+            <p>性格开朗，爱好比较多，希望和大家愉快相处。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-item">
+          <div class="team-image"> <img src="images/demo/portfolio-2.jpg" class="img-responsive" alt="author"> </div>
+          <div class="team-text">
+            <h3>吴芳静</h3>
+            <div class="team-position">前端讲师</div>
+            <p>不善言谈，好交诤友</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-item">
+          <div class="team-image"> <img src="images/demo/portfolio-2.jpg" class="img-responsive" alt="author"> </div>
+          <div class="team-text">
+            <h3>曾立</h3>
+            <div class="team-position">前端讲师</div>
+            <p>欢迎大家加入科协</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center;"> <a class="button black bigrounded"href="team.html">More</a> </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="section-title">
+          <h2>加入我们</h2>
+          <p>如果你也对科技感兴趣， </br>
+            如果你爱分享你的创新ideo， </br>
+            如果你也想有一个大施拳脚的场所， </br>
+            我们期待你的到来！</p>
+        </div>
+      </div>
+    </div>
+    
+    <!--联系栏-->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="你的名字 *" id="name" required data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="你的邮箱 *" id="email" required data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <textarea class="form-control" placeholder="想和我们说点什么 *" id="message" required data-validation-required-message="Please enter a message." style="overflow:hidden;"></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <div id="success"></div>
+              <button type="submit" class="btn">发送</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--回到顶端-->
+<p id="back-top"> <a href="#top"><i class="fa fa-angle-up"></i></a> </p>
+<!-- 首页电子部点击效果-->
+<div class="modal fade" id="Modal-1" tabindex="-1" role="dialog" aria-labelledby="Modal-label-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="Modal-label-1">电子部</h4>
+      </div>
+      <div class="modal-body"> <img src="images/demo/portfolio-2.jpg" alt="img01" class="img-responsive" />
+        <div class="modal-works"><span>51单片机</span><span>STM 32</span></div>
+        <p>欢迎大家加入电子部</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 首页计算机部点击效果-->
+<div class="modal fade" id="Modal-2" tabindex="-1" role="dialog" aria-labelledby="Modal-label-2">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="Modal-label-2">计算机部</h4>
+      </div>
+      <div class="modal-body"> <img src="images/demo/portfolio-2.jpg" alt="img01" class="img-responsive" />
+        <div class="modal-works"><span>web前端</span><span>web后端</span><span>算法</span><span>数模</span></div>
+        <p>欢迎大家加入计算机部</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 首页媒宣部点击效果-->
+<div class="modal fade" id="Modal-3" tabindex="-1" role="dialog" aria-labelledby="Modal-label-3">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="Modal-label-3">媒宣部</h4>
+      </div>
+      <div class="modal-body"> <img src="images/demo/portfolio-2.jpg" alt="img01" class="img-responsive" />
+        <div class="modal-works"><span>PhotoShop</span><span>美图秀秀</span></div>
+        <p>欢迎大家加入媒宣部</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 首页办公室点击效果-->
+<div class="modal fade" id="Modal-4" tabindex="-1" role="dialog" aria-labelledby="Modal-label-4">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="Modal-label-4">办公室</h4>
+      </div>
+      <div class="modal-body"> <img src="images/demo/portfolio-2.jpg" alt="img01" class="img-responsive" />
+        <div class="modal-works"><span>Microsoft Word</span> <span>Microsoft Excel</span></div>
+        <p>欢迎大家加入办公室</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/SmoothScroll.js"></script> 
+<script src="js/theme-scripts.js"></script> 
+<script src="js/myscript.js"></script>
+
+
+</body>
+</html>

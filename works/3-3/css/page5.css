@@ -1,0 +1,171 @@
+        .square {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background: no-repeat center/cover;
+        }
+
+        .square ul {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 65%;
+        }
+
+        .square ul li {
+            position: relative;
+            width: 19.5%;
+            height: 57%;
+            background-image: url("../img/p1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 50px;
+            box-shadow: 0 -20px 15px -10px black inset;
+            /*css3 过渡效果 在多长时间内 变化完成*/
+            transition: .8s;
+        }
+
+        .square ul li:nth-child(2) {
+            background-image: url("../img/p2.jpg");
+        }
+
+
+        .square ul li:hover {
+            background-position-y: -15px;
+            box-shadow: 0 -0px 15px -10px black inset;
+            /*transform:scale(1.3); css3缩放*/
+        }
+
+        .square ul li:nth-child(2):hover {
+            background-position-y: -10px;
+            box-shadow: 0 -0px 15px -10px black inset;
+            /*transform:scale(1.3); css3缩放*/
+        }
+
+        .square ul li i {
+            /*行内元素*/
+            position: absolute;
+            width: 100px;
+            height: 5px;
+            background-color: #a57c47;
+        }
+
+        .square ul li i:nth-child(even) {
+            /*偶数子元素*/
+            width: 2px;
+            height: 0px;
+        }
+
+        .square ul li i:nth-child(odd) {
+            /*奇数子元素*/
+            width: 0px;
+            height: 2px;
+        }
+
+        .square ul li i:nth-child(1) {
+            top: 9px;
+            left: 9px;
+        }
+
+        .square ul li i:nth-child(2) {
+            top: 9px;
+            right: 9px;
+        }
+
+        .square ul li i:nth-child(3) {
+            right: 9px;
+            bottom: 24px;
+        }
+
+        .square ul li i:nth-child(4) {
+            left: 9px;
+            bottom: 24px;
+        }
+
+        .square ul li:hover i {
+            /*动画实行  动画序列名称 时长 延迟 速度曲线 次数 状态值*/
+            animation: ghostRow .2s 0s linear 1 forwards;
+        }
+
+        .square ul li:hover i:nth-child(2) {
+            /*动画实行  动画序列名称 时长 延迟 速度曲线 次数 状态值*/
+            animation: ghostCol .09s 0.2s linear 1 forwards;
+        }
+
+        .square ul li:hover i:nth-child(3) {
+            /*动画实行  动画序列名称 时长 延迟 速度曲线 次数 状态值*/
+            animation: ghostRow .2s 0.29s linear 1 forwards;
+        }
+
+        .square ul li:hover i:nth-child(4) {
+            animation: ghostCol .09s 0.49s linear 1 forwards;
+        }
+
+        @keyframes ghostRow {
+            100% {
+                width: 94%;
+            }
+        }
+
+        @keyframes ghostCol {
+            100% {
+                height: 89%;
+            }
+        }
+
+        .square ol {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            font-size: 45px;
+        }
+
+        .square ol li {
+            position: relative;
+            /*参考系 定位父级*/
+            width: 300px;
+        }
+
+        .developer {
+            width: 150px;
+            font-size: 20px;
+            line-height: 35px;
+            transform: translate(1350px, 70px);
+        }
+
+        .developer ul {
+            list-style: circle;
+        }
+
+        .developer ul li {
+            margin-left: 40px;
+            list-style: disc;
+        }
+
+        .site-footer {
+            position: absolute;
+            bottom: 0px;
+            height: 95px;
+            width: 100%;
+            color: #fff;
+            background: black;
+            opacity: 0.45;
+            text-align: center;
+            line-height: 16px;
+        }
+
+        .site-footer a:link {
+            color: #fff;
+        }
+
+        .site-footer a:hover {
+            color: lemonchiffon;
+        }
