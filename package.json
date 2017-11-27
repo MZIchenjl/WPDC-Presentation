@@ -1,0 +1,31 @@
+{
+  "name": "wpdc-presentation",
+  "version": "0.0.0",
+  "private": true,
+  "description": "2017年“和巨耀通杯”网页设计大赛获奖作品展示",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MZIchenjl/WPDC-Presentation.git"
+  },
+  "author": "MZI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MZIchenjl/WPDC-Presentation/issues"
+  },
+  "homepage": "https://github.com/MZIchenjl/WPDC-Presentation#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
